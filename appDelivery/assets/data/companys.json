@@ -1,29 +1,29 @@
 [{
   "id": "1",
-  "name": "El Cabo Coffe Bar Tres De Mayo",
+  "name": "BURGUER DO ENGENHEIRO",
   "description": "Burururururururururururururururururur bara",
   "deliveryFee": 1.40,
   "minDeliveryTime": 25,
   "maxDeliveryTime": 35,
-  "rating": 4.0,
+  "rating": 4.3,
   "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg",
   "dishes": [
     {
-      "name": "Cheese Tequeños",
-      "description": "6 pieces of chese with sauce.",
-      "price": 6.90,
+      "name": "Burguer Mestre",
+      "description": "Blend suíno com bacon especial, alface americana, queijo prato fresco, cebola roxa e tomate confitado no chimichurri com molho barbecue.",
+      "price": 27.98,
       "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant2.jpeg"
     },
     {
-      "name": "Hamburger La Super Cabo Burger",
+      "name": "Engenheiro",
       "description": "Double meat, gouda cheese, cheddar cheese, cooked ham, bacon, egg, salad and rustic potatoes.",
       "price": 8.90,
       "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant3.jpeg"
     },
     {
-      "name": "U.S.A. Burger",
-      "description": "Beef, gouda cheese, cheddar cheese, cooked ham, bacon, egg and salad.",
-      "price": 5.40
+      "name": "Engenheiro",
+      "description": "Pão brioche, blend 180g, rúcula, creme de queijo provolone, tomate cereja confitado no azeite de chimichurri e maionese do engenheiro",
+      "price": 24.44
     },
     {
       "name": "Slices of Llanero Cheese",
