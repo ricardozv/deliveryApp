@@ -7,7 +7,7 @@
   "maxDeliveryTime": 35,
   "rating": 4.3,
   "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg",
-  "dishes": [
+  "requests": [
     {
       "name": "Burguer Mestre",
       "description": "Blend suíno com bacon especial, alface americana, queijo prato fresco, cebola roxa e tomate confitado no chimichurri com molho barbecue.",
@@ -17,7 +17,7 @@
     {
       "name": "Engenheiro",
       "description": "Double meat, gouda cheese, cheddar cheese, cooked ham, bacon, egg, salad and rustic potatoes.",
-      "price": 8.90,
+      "price": 8.99,
       "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant3.jpeg"
     },
     {
@@ -26,14 +26,21 @@
       "price": 24.44
     },
     {
+      "name": "Papas Locas El Cabo",
+      "description": "French fries with shredded chicken, gouda cheese and ham.",
+      "price": 7.96,
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant3.jpeg"
+    },
+    {
       "name": "Slices of Llanero Cheese",
       "description": "Ripe plantain with cheese and palm honey.",
-      "price": 5.90
+      "price": 5.99
     },
     {
       "name": "Papas Locas El Cabo",
       "description": "French fries with shredded chicken, gouda cheese and ham.",
-      "price": 7.90
+      "price": 7.96,
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant3.jpeg"
     }
   ]
 }, {
@@ -45,7 +52,7 @@
   "maxDeliveryTime": 35,
   "rating": 4.7,
   "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant2.jpeg",
-  "dishes": [
+  "requests": [
     {
       "name": "Cajun Ribs",
       "description": "For lovers of a spicy touch. Ribs bathed in our Original sauce accompanied by Cajun spices. Served with French fries and coleslaw.",
@@ -82,7 +89,7 @@
   "maxDeliveryTime": 30,
   "rating": 4.3,
   "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant3.jpeg",
-  "dishes": [
+  "requests": [
     {
       "name": "Burger Mustang",
       "description": "Homemade bread, burger sauce, lettuce, sweet and sour pickle, bacon, cheddar and BBQ sauce. Beef 180 grams.",
@@ -117,7 +124,7 @@
   "maxDeliveryTime": 40,
   "rating": 4.5,
   "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant4.jpeg",
-  "dishes": [
+  "requests": [
     {
       "name": "English burger",
       "description": "Beef with bacon, portobello mushrooms, tomato, cheddar cheese, grilled egg and our smoked sauce.",
