@@ -1,28 +1,28 @@
 import {View, Text, StyleSheet, Image} from "react-native";
 
-const ListItem = ({dish}) =>{
+const ListItem = ({request}) =>{
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.5}}>
-                <Text style={styles.name} numberOfLines ={1}>{dish.name}</Text>
-                <Text style={styles.description}numberOfLines ={4}>{dish.description}</Text>
-                <Text style={styles.prices}>R$ {dish.price}</Text>
+                <Text style={styles.name} numberOfLines ={1}>{request.name}</Text>
+                <Text style={styles.description}numberOfLines ={3}>{request.description}</Text>
+                <Text style={styles.prices}>R$ {request.price}</Text>
             </View>
-            {dish.image && (
-            <Image source = {{uri: dish.image}} style = {styles.image} />
+            {request.image && (
+            <Image source = {{uri: request.image}} style = {styles.image} />
             )}
-            </View>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
     container:{
         paddingHorizontal:4,
-        paddingVertical:3,
+        paddingVertical:4,
         margin:10,
-        paddingBottom:8,
+        paddingBottom:20,
         borderBottomColor:"lightgrey",
-        borderBottomWidth:1.5,
+        borderBottomWidth:1.3,
         flexDirection:"row"
     },
     name:{
