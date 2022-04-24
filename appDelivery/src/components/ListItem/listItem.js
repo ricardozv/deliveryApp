@@ -12,8 +12,8 @@ const ListItem = ({request}) =>{
             <Image source = {{uri: request.image}} style = {styles.image} />
             )}
         </View>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
     container:{
