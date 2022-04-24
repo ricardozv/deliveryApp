@@ -16,6 +16,7 @@ const CompanyDetais = () => {
                 ListHeaderComponent={() => <Header company={company} />}
                 data={company.requests}
                 renderItem={({item}) => <ListItem request={item} />}
+                showsVerticalScrollIndicator ={false}
             />
             <Ionicons
                 name="caret-back-circle-sharp"

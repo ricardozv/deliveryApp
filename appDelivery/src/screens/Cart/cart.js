@@ -4,7 +4,8 @@ import companys from "../../../assets/data/companys.json";
 import { AntDesign } from "@expo/vector-icons";
 
 const request = companys[0].requests[0]
-const RequestDetailScreen = () => {
+
+const Cart = () => {
 
 const [quantity, setQuantity] = useState(1);
 
@@ -25,12 +26,7 @@ const getTotal = () => {
 
     return (
         <View style={styles.page}>
-             <Image 
-                source={{uri: request.image}} 
-                style={styles.image}
-                resizeMode="cover" 
-             /> 
-            <Text style={styles.name}>{request.name}</Text>
+            <Text style={styles.name}>Cart</Text>
             <Text style={styles.description}>{request.description}</Text>
             <View style ={styles.separator} />
                 <View style={styles.row}>
@@ -115,4 +111,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default RequestDetailScreen;
+export default Cart;
