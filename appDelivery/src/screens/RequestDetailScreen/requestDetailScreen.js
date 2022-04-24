@@ -4,7 +4,6 @@ import companys from "../../../assets/data/companys.json";
 import { AntDesign } from "@expo/vector-icons";
 
 const request = companys[0].requests[0]
-
 const RequestDetailScreen = () => {
 
 const [quantity, setQuantity] = useState(1);
@@ -30,7 +29,7 @@ const getTotal = () => {
                 source={{uri: request.image}} 
                 style={styles.image}
                 resizeMode="cover" 
-            />
+             /> 
             <Text style={styles.name}>{request.name}</Text>
             <Text style={styles.description}>{request.description}</Text>
             <View style ={styles.separator} />
@@ -53,7 +52,7 @@ const getTotal = () => {
                 </View>
                 <View style={styles.button}>
                     <Text style={styles.TextProdButton}>
-                        Adicionar produtos {quantity} total  {getTotal()} R$
+                         Adicionar produtos {quantity} total  {getTotal()} R$
                     </Text>
                 </View>
 
@@ -73,11 +72,14 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         marginVertical: 10
     },
+    description:{
+        color:"grey"
+    },
     row:{
         flexDirection:"row",
         alignItems: "center",
         justifyContent:"center",
-        marginTop: 30
+        marginTop: 25
     },
     quantity:{
         fontSize: 20,
@@ -90,6 +92,7 @@ const styles = StyleSheet.create({
         alignItems:'center',
         marginLeft: 13,
         marginRight: 14,
+        borderRadius: 5
             
     },
     TextProdButton: {
@@ -106,6 +109,7 @@ const styles = StyleSheet.create({
     image:{
             width: "100%",
             aspectRatio: 5 / 3,
+            borderRadius: 10
     }
 
 
