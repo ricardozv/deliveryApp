@@ -1,61 +1,45 @@
 import { useState } from 'react';
-import {View, Text, StyleSheet, Image } from 'react-native';
+import {View, Text, StyleSheet, Image, FlatList } from 'react-native';
 import companys from "../../../assets/data/companys.json";
-import { AntDesign } from "@expo/vector-icons";
+//import { AntDesign } from "@expo/vector-icons";
 
-const request = companys[0].requests[0]
+const request = companys[0];
 
-const Cart = () => {
-
-const [quantity, setQuantity] = useState(1);
-
-const onMinus = () =>{
-
-    if (quantity > 1) {
-        setQuantity (quantity - 1);
-        }
-    };
-
-const onPlus = () =>{
-        setQuantity (quantity + 1);
-    };
-
-const getTotal = () => {
-    return (request.price * quantity).toFixed(2)
-}
-
-    return (
-        <View style={styles.page}>
-            <Text style={styles.name}>Cart</Text>
-            <Text style={styles.description}>{request.description}</Text>
-            <View style ={styles.separator} />
-                <View style={styles.row}>
-
-                    <AntDesign 
-                    name = "minuscircleo" 
-                    size={60} 
-                    color={"black"} 
-                    onPress={onMinus} />
-                    
-                    <Text style={styles.quantity}>{quantity}</Text>
-                    
-                    <AntDesign 
-                    name = "pluscircleo" 
-                    size={60} 
-                    color={"black"} 
-                    onPress={onPlus}/>
-
-                </View>
-                <View style={styles.button}>
-                    <Text style={styles.TextProdButton}>
-                         Adicionar produtos {quantity} total  {getTotal()} R$
-                    </Text>
-                </View>
-
+const CartResquestItem = ({cartRequest}) => { 
+    return(
+        <View style={styles.row}>
+            <View style={styles.quantityContainer}>
+                <Text style={styles.quantity}>1</Text>
+            </View>
+            <Text style={{fontWeight:"600"}}>{cartRequest.name}</Text>
+            <Text style={{marginLeft:"auto"}}>{cartRequest.price} R$ </Text>
         </View>
-
     )
 }
+
+const Cart = () => { 
+    return (
+        <View style={styles.page}>
+            <Text style={styles.name}>{request.name}</Text>
+            <Text style={{fontWeight: '600', marginTop: 10, fontSize: 18}}>Seu pedido</Text>
+         
+                <FlatList 
+                    data={request.requests}
+                    renderItem={
+                    ({item}) => <CartResquestItem 
+                    cartRequest={item}/>} 
+                />
+            
+            <View style ={styles.separator} />
+                <View style={styles.button}>
+                    <Text style={styles.TextProdButton}>
+                         Fazer pedido
+                    </Text>
+                </View>
+        </View>
+
+    );
+};
 
 const styles = StyleSheet.create({
     page: {
@@ -64,23 +48,14 @@ const styles = StyleSheet.create({
         paddingVertical: 20
     },
     name:{
-        fontSize: 25,
-        fontWeight: '600',
+        fontSize: 22,
+        fontWeight: 'bold',
         marginVertical: 10
-    },
-    description:{
-        color:"grey"
     },
     row:{
         flexDirection:"row",
         alignItems: "center",
-        justifyContent:"center",
-        marginTop: 25
-    },
-    quantity:{
-        fontSize: 20,
-        fontWeight:"bold",
-        marginHorizontal: 8
+        marginTop: 20
     },
     button:{
         backgroundColor:'black',
@@ -100,12 +75,13 @@ const styles = StyleSheet.create({
         marginVertical: 15,
         paddingBottom: 6
 
-        
     },
-    image:{
-            width: "100%",
-            aspectRatio: 5 / 3,
-            borderRadius: 10
+    quantity:{
+        backgroundColor:"lightgrey",
+        paddingHorizontal: 5,
+        paddingVertical: 3,
+        marginRight: 7,
+        borderRadius: 3
     }
 
 
