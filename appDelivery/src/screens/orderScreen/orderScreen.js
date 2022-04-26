@@ -1,14 +1,18 @@
-import React from 'react';
-import {View, Text} from 'react-native';
 
-const orderScreen = () => {
+import {View, Text, FlatList} from 'react-native';
+import OrderListItem from '../../components/orderListItem/orderListItem';
+import orders from '../../../assets/data/orders.json';
+
+const OrderScreen = () => {
     return (
-        <View>
-            <Text>
-                orderScreen
-            </Text>
+        <View style={{flex: 1, width: "100%", paddingTop: 50}}>
+            <FlatList 
+                data={orders}
+                renderItem={({item})=> 
+                <OrderListItem order={item} />} 
+                />
         </View>
-    )
-}
+    );
+};
 
-export default orderScreen;
+export default OrderScreen;
