@@ -1,5 +1,5 @@
 import React from "react";
-import {View, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 import companys from '../../../assets/data/companys.json';
 import {Ionicons} from "@expo/vector-icons";
 import Header from "./header";

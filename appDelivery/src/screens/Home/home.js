@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, View } from 'react-native';
+import { View, FlatList, StyleSheet } from 'react-native';
 import CompanyItem from "../../components/companyItem/companyItem";
 import companys from '../../../assets/data/companys.json';
 

@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, Image} from "react-native";
+import { View, Text, StyleSheet, Image} from "react-native";
 
 const ListItem = ({request}) =>{
     return (

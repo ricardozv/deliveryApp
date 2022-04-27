@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import companys from "../../../assets/data/companys.json";
 import { AntDesign } from "@expo/vector-icons";
 

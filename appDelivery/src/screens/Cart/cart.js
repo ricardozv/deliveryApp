@@ -1,21 +1,9 @@
 import { useState } from 'react';
 import {View, Text, StyleSheet, Image, FlatList } from 'react-native';
 import companys from "../../../assets/data/companys.json";
-//import { AntDesign } from "@expo/vector-icons";
+import CartResquestItem from '../../components/CartRequestItem/cartRequestItem';
 
 const request = companys[0];
-
-const CartResquestItem = ({cartRequest}) => { 
-    return(
-        <View style={styles.row}>
-            <View style={styles.quantityContainer}>
-                <Text style={styles.quantity}>1</Text>
-            </View>
-            <Text style={{fontWeight:"600"}}>{cartRequest.name}</Text>
-            <Text style={{marginLeft:"auto"}}>{cartRequest.price} R$ </Text>
-        </View>
-    )
-}
 
 const Cart = () => { 
     return (
