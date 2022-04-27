@@ -1,5 +1,5 @@
 import React from "react";
-import {View, Text, Image } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import companys from '../../../assets/data/companys.json';
 //import ListItem from '../../components/ListItem/listItem';
 import styles from "./styles";
