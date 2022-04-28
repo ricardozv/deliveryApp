@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {View, Text, StyleSheet, Image, FlatList } from 'react-native';
+import {View, Text, StyleSheet, FlatList } from 'react-native';
 import companys from "../../../assets/data/companys.json";
 import CartResquestItem from '../../components/CartRequestItem/cartRequestItem';
 

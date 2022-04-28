@@ -6,18 +6,21 @@ import RequestDetailScreen from './src/screens/RequestDetailScreen/requestDetail
 import Cart from './src/screens/Cart/cart';
 import OrderScreen from './src/screens/OrderScreen/orderScreen';
 import OrderDetails from './src/screens/OrderDetails/orderDetails';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
+    <NavigationContainer>
     <View style={styles.container}>
-         {/*  <Home /> */}
-         {/* < CompanyDetais /> */}
+        {/*  <Home /> */}
+        {/* < CompanyDetais /> */}
          {/*< RequestDetailScreen /> */}
          {/* <OrderScreen /> */}
-          {/* < OrderDetails /> */} 
-         {/* < Cart /> */}
+          {/*< OrderDetails />*/}
+          < Cart /> 
       <StatusBar style="auto" />
     </View>
+    </NavigationContainer>
   );
 }
 

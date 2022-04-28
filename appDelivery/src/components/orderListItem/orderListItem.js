@@ -8,7 +8,6 @@ const OrderListItem = ({order}) => {
                   style={{width: 75, height: 75, marginRight: 5}}
            />
            <View>
-           
                <Text style={{fontWeight:'bold', fontSize: 16   }} numberOfLines ={2}>
                    {order.Company.name}
                </Text> 
