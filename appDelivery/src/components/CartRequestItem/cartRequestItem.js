@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
     row:{
         flexDirection:"row",
         alignItems: "center",
-        marginTop: 20
+        marginTop: 20,
+        backgroundColor:'#fff000'
     },
     quantityContainer:{
         backgroundColor:"lightgrey",

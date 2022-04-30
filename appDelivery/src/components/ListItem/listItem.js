@@ -17,6 +17,7 @@ const ListItem = ({request}) =>{
 
 const styles = StyleSheet.create({
     container:{
+        backgroundColor:'#fff000',
         paddingHorizontal:4,
         paddingVertical:4,
         margin:10,

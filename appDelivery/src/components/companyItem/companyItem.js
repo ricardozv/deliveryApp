@@ -1,8 +1,14 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-const CompanyItem = ({company}) => {
+const CompanyItem = ({ company }) => {
+    const navigation = useNavigation();
+
+    const onPress = () => {
+        navigation.navigate("CompanyDetais", { id:company.id });
+    }
     return (
-        <View style={styles.companyContainer}>
+        <Pressable onPress = {onPress} style={styles.companyContainer}>
             <Image source={{ uri: company.image }} style={styles.image} />
             <View style={styles.row}>
                <View> 
@@ -14,7 +20,7 @@ const CompanyItem = ({company}) => {
                     <Text>{company.rating}</Text>
                 </View>
             </View>
-        </View>
+        </Pressable>
         
     );
 };
@@ -26,6 +32,7 @@ const styles = StyleSheet.create ({
         display: "flex",
         width: "100%",
         marginVertical: 5,
+        backgroundColor:'#fff000'
       },
     image: {
         borderRadius: 10,

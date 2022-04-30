@@ -1,15 +1,20 @@
-import React from "react";
 import { View, FlatList } from 'react-native';
 import companys from '../../../assets/data/companys.json';
 import {Ionicons} from "@expo/vector-icons";
-import Header from "./header";
 import ListItem from '../../components/ListItem/listItem';
+import Header from "./header";
 import styles from "./styles";
 
+import { useRoute, useNavigation } from "@react-navigation/native";
 
 const company = companys[0];
 
 const CompanyDetais = () => {
+
+    const route = useRoute();
+    const navigation = useNavigation();
+    const id = route.params?.id;
+    console.warn(id);
     return (
         <View style={styles.page}>
             <FlatList 
@@ -17,8 +22,10 @@ const CompanyDetais = () => {
                 data={company.requests}
                 renderItem={({item}) => <ListItem request={item} />}
                 showsVerticalScrollIndicator ={false}
+                keyExtractor = { (item) => item.id }
             />
             <Ionicons
+                onPress={() => navigation.goBack()}
                 name="caret-back-circle-sharp"
                 size={45}
                 color="#fff000"
