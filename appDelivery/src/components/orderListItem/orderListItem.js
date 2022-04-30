@@ -2,7 +2,7 @@ import { View, Image, Text } from "react-native";
 
 const OrderListItem = ({order}) => {
     return (
-        <View style={{flexDirection:'row', margin:10, alignItems:'center'  }}>
+        <View style={{backgroundColor:'#fff000', flexDirection:'row', margin:10, alignItems:'center'  }}>
             
            <Image source={{ uri: order.Company.image}} 
                   style={{width: 75, height: 75, marginRight: 5}}

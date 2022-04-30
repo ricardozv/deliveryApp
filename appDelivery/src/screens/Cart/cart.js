@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     page: {
         flex:1,
         width: "100%",
-        paddingVertical: 20
+        paddingVertical: 20,
+        backgroundColor:'#fff000'
     },
     name:{
         fontSize: 22,

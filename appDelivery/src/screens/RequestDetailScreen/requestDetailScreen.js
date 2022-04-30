@@ -4,24 +4,22 @@ import companys from "../../../assets/data/companys.json";
 import { AntDesign } from "@expo/vector-icons";
 
 const request = companys[0].requests[0]
+
 const RequestDetailScreen = () => {
-
-const [quantity, setQuantity] = useState(1);
-
-const onMinus = () =>{
-
-    if (quantity > 1) {
+    const [quantity, setQuantity] = useState(1);
+        const onMinus = () =>{
+            if (quantity > 1) {
         setQuantity (quantity - 1);
         }
-    };
+};
 
 const onPlus = () =>{
         setQuantity (quantity + 1);
-    };
+};
 
 const getTotal = () => {
     return (request.price * quantity).toFixed(2)
-}
+};
 
     return (
         <View style={styles.page}>
@@ -34,22 +32,23 @@ const getTotal = () => {
             <Text style={styles.description}>{request.description}</Text>
             <View style ={styles.separator} />
                 <View style={styles.row}>
-
                     <AntDesign 
-                    name = "minuscircleo" 
-                    size={60} 
-                    color={"black"} 
-                    onPress={onMinus} />
+                        name = "minuscircleo" 
+                        size={60} 
+                        color={"black"} 
+                        onPress={onMinus} 
+                    />
                     
                     <Text style={styles.quantity}>{quantity}</Text>
                     
                     <AntDesign 
-                    name = "pluscircleo" 
-                    size={60} 
-                    color={"black"} 
-                    onPress={onPlus}/>
-
+                        name = "pluscircleo" 
+                        size={60} 
+                        color={"black"} 
+                        onPress={onPlus}
+                    />
                 </View>
+                
                 <View style={styles.button}>
                     <Text style={styles.TextProdButton}>
                          Adicionar produtos {quantity} total  {getTotal()} R$
@@ -65,7 +64,8 @@ const styles = StyleSheet.create({
     page: {
         flex:1,
         width: "100%",
-        paddingVertical: 20
+        paddingVertical: 20,
+        backgroundColor:'#fff000'
     },
     name:{
         fontSize: 25,
