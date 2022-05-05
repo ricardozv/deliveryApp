@@ -7,13 +7,14 @@ import styles from "./styles";
 
 import { useRoute, useNavigation } from "@react-navigation/native";
 
-const company = companys[0];
+const company = companys[1];
 
-const CompanyDetais = () => {
+const CompanyDetails = () => {
 
     const route = useRoute();
     const navigation = useNavigation();
     const id = route.params?.id;
+
     console.warn(id);
     return (
         <View style={styles.page}>
@@ -27,7 +28,7 @@ const CompanyDetais = () => {
             <Ionicons
                 onPress={() => navigation.goBack()}
                 name="caret-back-circle-sharp"
-                size={45}
+                size={40}
                 color="#fff000"
                 style={styles.iconContainer}
             />
@@ -36,4 +37,4 @@ const CompanyDetais = () => {
 };
 
 
-export default CompanyDetais;
+export default CompanyDetails;

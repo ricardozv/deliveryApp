@@ -7,7 +7,7 @@ export default function App() {
   return (
 
       <NavigationContainer>
-        <RootNavigate style={styles.container}/>
+        <RootNavigate />
         <StatusBar style="auto" />
       </NavigationContainer>
   );

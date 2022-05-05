@@ -5,7 +5,7 @@ const CompanyItem = ({ company }) => {
     const navigation = useNavigation();
 
     const onPress = () => {
-        navigation.navigate("CompanyDetais", { id:company.id });
+        navigation.navigate("CompanyDetails", {id: company.id});
     }
     return (
         <Pressable onPress = {onPress} style={styles.companyContainer}>
@@ -24,8 +24,6 @@ const CompanyItem = ({ company }) => {
         
     );
 };
-
-export default CompanyItem;
 
 const styles = StyleSheet.create ({
     companyContainer: {
@@ -65,3 +63,4 @@ const styles = StyleSheet.create ({
     }
 });
 
+export default CompanyItem;

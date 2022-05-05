@@ -7,8 +7,9 @@ export default StyleSheet.create({
     },
     iconContainer:{
         position: "absolute",
-        top: 18,
-        left: 15,
+        top: 38,
+        left: 25,
+        
     },
     image:{
         width: "100%",
