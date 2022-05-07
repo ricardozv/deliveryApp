@@ -29,7 +29,7 @@ const OrderDetails = () => {
     return (
         <FlatList 
             ListHeaderComponent={OrderDetailsHeader}
-            data = {companys[0].requests}
+            data = {companys[1].requests}
             renderItem={({item})=> <CartResquestItem cartRequest={item} />} 
         />
     );

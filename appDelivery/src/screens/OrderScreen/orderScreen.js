@@ -9,7 +9,7 @@ const OrderScreen = () => {
                 data={orders}
                 renderItem={({item})=> 
                 <OrderListItem order={item} />} 
-                />
+            />
         </View>
     );
 };

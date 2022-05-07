@@ -5,9 +5,9 @@ import companys from '../../../assets/data/companys.json';
 import styles from "./styles";
 
 
-const company = companys[0];
+const company = companys[1];
 
-const CompanyDetais = () => {
+const CompanyDetails = () => {
     return (
         <View style={styles.page}>
             <Image 
@@ -26,4 +26,4 @@ const CompanyDetais = () => {
 };
 
 
-export default CompanyDetais;
+export default CompanyDetails;
