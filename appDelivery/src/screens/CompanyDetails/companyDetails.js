@@ -15,7 +15,6 @@ const CompanyDetails = () => {
     const navigation = useNavigation();
     const id = route.params?.id;
 
-    console.warn(id);
     return (
         <View style={styles.page}>
             <FlatList 
@@ -23,7 +22,7 @@ const CompanyDetails = () => {
                 data={company.requests}
                 renderItem={({item}) => <ListItem request={item} />}
                 showsVerticalScrollIndicator ={false}
-                keyExtractor = { (item) => item.id }
+                keyExtractor = { (item) => item.name }
             />
             <Ionicons
                 onPress={() => navigation.goBack()}

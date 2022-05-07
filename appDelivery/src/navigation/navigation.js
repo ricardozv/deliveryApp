@@ -1,5 +1,5 @@
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Home from '../../src/screens/Home/home';
 import CompanyDetails from '../../src/screens/CompanyDetails/companyDetails';
 // import RequestDetailScreen from './src/screens/RequestDetailScreen/requestDetailScreen';
@@ -8,16 +8,19 @@ import OrderScreen from '../../src/screens/OrderScreen/orderScreen';
 // import OrderDetails from './src/screens/OrderDetails/orderDetails';
 
 import { Foundation, FontAwesome, Octicons, FontAwesome5 } from '@expo/vector-icons';
+import ListItem from '../components/ListItem/listItem';
 
 const Stack = createNativeStackNavigator();
 
 const RootNavigate = () => {
     return (
-        <Stack.Navigator initialRouteName='Home'>
+        <Stack.Navigator >
             <Stack.Screen 
                 name="Home" 
-                component={Home}
-                options={{ headerStyle: {
+                component={HomeTabs}
+                options={{
+                    headerShown: false, 
+                    headerStyle: {
                     backgroundColor: '#fff000'
                   }}} />
 

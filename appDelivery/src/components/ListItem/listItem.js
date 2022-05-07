@@ -1,17 +1,24 @@
-import { View, Text, StyleSheet, Image} from "react-native";
+import { View, Text, StyleSheet, Image, Pressable} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-const ListItem = ({request}) =>{
+const ListItem = ({ request }) =>{
+    const navigation = useNavigation();
+
+    const onPress = () => {
+        navigation.navigate("Resquest", {id:request.id});
+    }
+
     return (
-        <View style={styles.container}>
+        <Pressable onPress = {onPress} style={styles.container}>
             <View style={{ flex: 0.5}}>
-                <Text style={styles.name} numberOfLines ={1}>{request.name}</Text>
+                <Text style={styles.name} numberOfLines ={2}>{request.name}</Text>
                 <Text style={styles.description}numberOfLines ={3}>{request.description}</Text>
                 <Text style={styles.prices}>R$ {request.price}</Text>
             </View>
             {request.image && (
             <Image source = {{uri: request.image}} style = {styles.image} />
             )}
-        </View>
+        </Pressable>
     );
 };
 
