@@ -1,25 +1,23 @@
 import { useState } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 import companys from "../../../assets/data/companys.json";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from '@react-navigation/native';
 
 const request = companys[0].requests[0]
 
 const RequestDetailScreen = () => {
     const [quantity, setQuantity] = useState(1);
-        const onMinus = () =>{
-            if (quantity > 1) {
-        setQuantity (quantity - 1);
+        const navigation = useNavigation();
+            const onMinus = () =>{
+                if (quantity > 1) {
+                    setQuantity (quantity - 1);
         }
 };
 
-const onPlus = () =>{
-        setQuantity (quantity + 1);
-};
+const onPlus = () => { setQuantity (quantity + 1)};
 
-const getTotal = () => {
-    return (request.price * quantity).toFixed(2)
-};
+const getTotal = () => { return (request.price * quantity).toFixed(2)};
 
     return (
         <View style={styles.page}>
@@ -49,11 +47,11 @@ const getTotal = () => {
                     />
                 </View>
                 
-                <View style={styles.button}>
+                <Pressable onPress={() => navigation.navigate("Cart")} style={styles.button}>
                     <Text style={styles.TextProdButton}>
                          Adicionar produtos {quantity} total  {getTotal()} R$
                     </Text>
-                </View>
+                </Pressable>
 
         </View>
 

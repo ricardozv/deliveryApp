@@ -2,7 +2,7 @@ import { View, FlatList, StyleSheet } from 'react-native';
 import CompanyItem from "../../components/companyItem/companyItem";
 import companys from '../../../assets/data/companys.json';
 
-export default function Home() {
+export default function Home () {
   return (
     <View style={styles.container}>
       < FlatList 

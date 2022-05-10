@@ -1,11 +1,17 @@
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+
 
 const OrderListItem = ({order}) => {
+    const navigation = useNavigation();
     return (
-        <View style={{backgroundColor:'#fff000', flexDirection:'row', margin:10, alignItems:'center'  }}>
+        <Pressable 
+        onPress={() => navigation.navigate("Request", {id: request.id})}
+        style={{backgroundColor:'#fff000', flexDirection:'row', margin:10, alignItems:'center'  }}>
             
            <Image source={{ uri: order.Company.image}} 
-                  style={{width: 75, height: 75, marginRight: 5}}
+                style={{width: 75, height: 75, marginRight: 5}}
            />
            <View>
                <Text style={{fontWeight:'bold', fontSize: 16   }} numberOfLines ={2}>
@@ -18,8 +24,8 @@ const OrderListItem = ({order}) => {
                    3 dias atrás {order.status}
                </Text>
            </View>
-        </View>
-    )
-}
+        </Pressable>
+    );
+};
 
 export default OrderListItem;

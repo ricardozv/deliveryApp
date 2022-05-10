@@ -7,7 +7,6 @@ const ListItem = ({ request }) =>{
     const onPress = () => {
         navigation.navigate("Resquest", {id:request.id});
     }
-
     return (
         <Pressable onPress = {onPress} style={styles.container}>
             <View style={{ flex: 0.5}}>

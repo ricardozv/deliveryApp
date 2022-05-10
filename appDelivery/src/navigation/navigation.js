@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Home from '../../src/screens/Home/home';
 import CompanyDetails from '../../src/screens/CompanyDetails/companyDetails';
-// import RequestDetailScreen from './src/screens/RequestDetailScreen/requestDetailScreen';
+import RequestDetailScreen from '../../src/screens/RequestDetailScreen/requestDetailScreen';
 import Cart from '../../src/screens/Cart/cart';
 import OrderScreen from '../../src/screens/OrderScreen/orderScreen';
 // import OrderDetails from './src/screens/OrderDetails/orderDetails';
@@ -16,11 +16,11 @@ const RootNavigate = () => {
     return (
         <Stack.Navigator >
             <Stack.Screen 
-                name="Home" 
+                name="HomeTabs" 
                 component={HomeTabs}
                 options={{
-                    headerShown: false, 
                     headerStyle: {
+                    headerShown: false,
                     backgroundColor: '#fff000'
                   }}} />
 
@@ -30,7 +30,7 @@ const RootNavigate = () => {
                 options={{ 
                     headerShown: false
                   }}
-            />
+                />  
         </Stack.Navigator>
     );
 };
@@ -38,11 +38,12 @@ const RootNavigate = () => {
 const Tab = createMaterialBottomTabNavigator();
 
 const HomeTabs = () => {
+
     return (
         <Tab.Navigator barStyle= {{ height:50, backgroundColor:'#fff000'}}>
             <Tab.Screen 
-                name='Home'
-                component={Home}
+                name="Home"
+                component={HomeStackNavigator}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <Foundation 
@@ -54,8 +55,8 @@ const HomeTabs = () => {
             />
 
             <Tab.Screen 
-                name='Busca'
-                component={Home}
+                name='Bares'
+                component={RequestDetailScreen}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <FontAwesome5 
@@ -78,7 +79,7 @@ const HomeTabs = () => {
                     )
                 }} 
             />
-            
+           
             <Tab.Screen 
                 name='Orders'
                 component={OrderScreen} 
@@ -105,10 +106,24 @@ const HomeTabs = () => {
                         />
                     )
                 }} 
-            />
+            /> 
         
         </Tab.Navigator>
     );
 };
+
+const HomeStack = createNativeStackNavigator();
+
+const HomeStackNavigator = () => {
+    return (
+
+    <HomeStack.Navigator>
+        <HomeStack.Screen name = "Companys" component={Home} />
+        <HomeStack.Screen name = "Company" component={CompanyDetails} />
+        <HomeStack.Screen name = "Request" component={RequestDetailScreen} />
+        <HomeStack.Screen name = "Cart" component={Cart} />      
+    </HomeStack.Navigator>
+    )
+}
 
 export default RootNavigate;
